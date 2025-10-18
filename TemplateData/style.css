@@ -17,4 +17,24 @@
 .webgl-content .footer .title {margin-right: 10px; float: right;}
 .webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 50px; float: right;}
 
-.webgl-content .container {aspect-ratio: 16 / 9;}	
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #050505;
+}
+.webgl-content {
+  width: 90vw;
+  height: auto;
+}
+
+#unityContainer {
+  width: 100%;              /* fill the .webgl-content width */
+  aspect-ratio: 16 / 9;     /* maintain 16:9 aspect ratio */
+  background-color: black;  /* optional: black box while loading */
+}
