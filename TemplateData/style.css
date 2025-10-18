@@ -19,23 +19,26 @@
 
 
 html, body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #040404;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #040404;
+  overflow: hidden; /* Prevent scroll */
 }
+
 .webgl-content {
   width: 90vw;
-  height: 90vw;
+  max-width: 1280px;
+  aspect-ratio: 16 / 9;
+  background-color: black;
 }
 
 #unityContainer {
-  width: 100%;              /* fill the .webgl-content width */
+  width: 100%;
   height: 100%;
-  aspect-ratio: 16 / 9;     /* maintain 16:9 aspect ratio */
-  background-color: black;  /* optional: black box while loading */
 }
+
