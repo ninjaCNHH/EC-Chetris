@@ -30,11 +30,12 @@ html, body {
 }
 .webgl-content {
   width: 90vw;
-  height: auto;
+  height: 90vw;
 }
 
 #unityContainer {
   width: 100%;              /* fill the .webgl-content width */
+  height: 100%;
   aspect-ratio: 16 / 9;     /* maintain 16:9 aspect ratio */
   background-color: black;  /* optional: black box while loading */
 }
