@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
 "productName": "EC-FinalGame-Unity",
-"productVersion": "0.1",
+"productVersion": "1.0",
 "dataUrl": "EC-Chetris.data.unityweb",
 "wasmCodeUrl": "EC-Chetris.wasm.code.unityweb",
 "wasmFrameworkUrl": "EC-Chetris.wasm.framework.unityweb",
