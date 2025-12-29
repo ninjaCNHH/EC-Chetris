@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | [Replace with game title]</title>
+    <title>EC Chetris</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/[Replace with Unity file name].json", {onProgress: UnityProgress});
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/EC-Chetris.json", {onProgress: UnityProgress});
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,18 +125,22 @@
     </style>
   </head>
   <body>
-  <h1 id="main-title">[Replace with game title]</h1>
-  <p>This is [Replace with ninja's name] project from Codeninjas Hacienda Heights</p>
-  <p>[Replace with description of the game.]</p>
+  <h1 id="main-title">EC Chetris</h1>
+  <p>This is Enzo's black belt game from Codeninjas Hacienda Heights</p>
+  <p>Chess and Tetris are among the most popular games of all time. Chess is a strategy game that has stood strong for hundreds of years. 
+    Tetris defined an era of computer games, and is still the best selling video game of all time. CHETRIS pairs the two games to find which is 
+    truly the game that reigns supreme.</p>
 
   <div class="content-container">
     <div class="webgl-balanced-container">
       <div class="instructions">
         <h2 class="subtitle">How To Play</h2>
         <ol>
-          <li>[Replace with instruction 1]</li>
-          <li>[Replace with instruction 2]</li>
-          <li>[Replace with instruction 3]</li>
+          <li>Enemy pieces will come from the top, if they reach the bottom, you lose!</li>
+          <li>You can buy Chess pieces from the Shop panel on the right to help attack. Enemy will attack any Chess pieces in their way to get through.</li>
+          <li>To purchase more chess pieces or upgrades, you can defeat enemies or passively earn money with a king!</li>
+          <li>The game will become more difficult over time by spawning more enemies and stronger varieties. Upgrade chess piece types to upgrade all spawned chess pieces of the coressponding type. </li>
+          <li>You can move around chess pieces by clicking on them, and moving them as you would in Chess. Triple click any chess piece except the King to destroy it. </li>
         </ol>
       </div>
   
@@ -145,7 +149,7 @@
         <div class="footer">
           <div class="webgl-logo"></div>
           <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">[Replace with game title]</div>
+          <div class="title">EC Chetris by Enzo</div>
         </div>
       </div>
   
