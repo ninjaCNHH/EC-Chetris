@@ -67,10 +67,11 @@
       display: flex;
       align-items: flex-start;
       gap: 40px;
-      width: 100%;           /* take full width */
-      justify-content: space-between; /* push left and right items to edges */
+      width: 100%;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    
+
     .instructions,
     .spacer {
       flex: 0 0 300px;   /* fixed base width */
@@ -144,6 +145,7 @@
       display: flex;
       justify-content: center;
       margin-top: 20px;
+      overflow-x: hidden;
     }
     
     /* Prevent overlap in narrow windows */
@@ -153,6 +155,12 @@
         align-items: center;
       }
     }
+    @media (max-width: 1200px) {
+      .spacer {
+        display: none;
+      }
+    }
+
     </style>
   </head>
   <body>
