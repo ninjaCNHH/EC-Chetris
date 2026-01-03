@@ -52,13 +52,13 @@
     }
     
     .webgl-balanced-container {
-      display: flex;
-      align-items: flex-start;
-      gap: 40px;
-      justify-content: flex-start;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 300px 1fr 300px;
+      align-items: start;
+      width: 100%;
       padding-left: 40px;
       padding-right: 40px;
+      box-sizing: border-box;
     }
 
     .instructions,
@@ -70,6 +70,7 @@
     .instructions {
       text-align: left;  /* keep text hugging left */
       align-self: flex-start;
+      grid-column: 1;
     }
     
     .webgl-content { 
@@ -148,10 +149,17 @@
     /* Prevent overlap in narrow windows */
     @media (max-width: 900px) {
       .webgl-balanced-container {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+      }
+    
+      .instructions,
+      .unity-frame,
+      .spacer {
+        grid-column: 1;
+        margin: 0 auto;
       }
     }
+
     @media (max-width: 1200px) {
       .spacer {
         display: none;
@@ -164,13 +172,18 @@
       min-height: 480px;
       position: relative;
       flex-shrink: 0;
+      grid-column: 2;
+      margin: 0 auto;
     }
     
     /* Prevent Unity from overlapping siblings */
     .unity-frame * {
       box-sizing: border-box;
     }
-
+      
+    .spacer {
+      grid-column: 3;
+    }
     </style>
   </head>
   <body>
