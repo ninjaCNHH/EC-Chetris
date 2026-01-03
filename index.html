@@ -28,8 +28,6 @@
       margin: 0;
       padding: 0;
       font-family: "Fredoka", cursive;
-      display: flex;
-      flex-direction: column;
     }
     
     #main-title {
@@ -57,7 +55,6 @@
       display: flex;
       align-items: flex-start;
       gap: 40px;
-      width: 100%;
       justify-content: center;
       flex-wrap: wrap;
     }
@@ -115,7 +112,14 @@
       height: 480px; 
       background: #000; /* fallback */ 
     }
-    
+
+    .unity-section {
+      width: 100%;
+      display: block;
+      clear: both;
+      margin-top: 40px;
+    }
+
     .footer {
       margin-top: 10px;
       text-align: center;
@@ -151,14 +155,6 @@
       }
     }
 
-    /* 🔒 FORCE Unity back into normal document flow */
-    .webgl-content {
-      position: static !important;
-    }
-    
-    #unityContainer {
-      position: static !important;
-    }
     </style>
   </head>
   <body>
@@ -170,7 +166,8 @@
         truly the game that reigns supreme.</p>
     </div>
 
-  <div class="main-content">
+<div class="main-content">
+  <div class="unity-section">
     <div class="webgl-balanced-container">
       <div class="instructions">
         <h2 class="subtitle">How To Play</h2>
@@ -194,6 +191,7 @@
   
       <div class="spacer"></div>
     </div>
-  </div>    
+  </div>   
+</div>
   </body>
 </html>
