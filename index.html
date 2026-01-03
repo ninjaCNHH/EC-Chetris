@@ -53,16 +53,6 @@
       margin: 0.3em 0; /* reduced top and bottom space */
     }
     
-    .content-container {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 40px;
-      padding: 0 20px;
-      flex-wrap: wrap;
-      margin-top: 2em; /* ⬅ add extra spacing below the last <p> */
-    }
-    
     .webgl-balanced-container {
       display: flex;
       align-items: flex-start;
@@ -82,8 +72,12 @@
       text-align: left;  /* keep text hugging left */
     }
     
-    .webgl-content {
-      position: static !important;
+    .webgl-content { 
+      flex: 0 0 auto; /* don’t stretch */ 
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center; 
     }
   
     .subtitle {
@@ -115,9 +109,11 @@
       min-width: 400px;
     }
   
-    /* Adjust Unity container size */
-    #unityContainer {
-      position: static !important;
+    /* Adjust Unity container size */ 
+    #unityContainer { 
+      width: 640px; 
+      height: 480px; 
+      background: #000; /* fallback */ 
     }
     
     .footer {
@@ -138,7 +134,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-      margin-top: 20px;
+      margin-top: 40px;
       overflow-x: hidden;
     }
     
@@ -155,6 +151,14 @@
       }
     }
 
+    /* 🔒 FORCE Unity back into normal document flow */
+    .webgl-content {
+      position: static !important;
+    }
+    
+    #unityContainer {
+      position: static !important;
+    }
     </style>
   </head>
   <body>
