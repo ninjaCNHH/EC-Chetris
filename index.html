@@ -28,6 +28,8 @@
       margin: 0;
       padding: 0;
       font-family: "Fredoka", cursive;
+      display: flex;
+      flex-direction: column;
     }
     
     #main-title {
@@ -127,17 +129,42 @@
       margin-top: 10px;
       text-align: center;
       color: #fff;
-    }      
+    }
+
+    /* Header always occupies its own space */
+    .page-header {
+      text-align: center;
+      padding: 20px 20px 10px;
+      flex-shrink: 0;
+    }
+    
+    /* Force Unity section below header */
+    .main-content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    /* Prevent overlap in narrow windows */
+    @media (max-width: 900px) {
+      .webgl-balanced-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
     </style>
   </head>
   <body>
-  <h1 id="main-title">EC Chetris</h1>
-  <p>This is Enzo's black belt game from Codeninjas Hacienda Heights</p>
-  <p>Chess and Tetris are among the most popular games of all time. Chess is a strategy game that has stood strong for hundreds of years. 
-    Tetris defined an era of computer games, and is still the best selling video game of all time. CHETRIS pairs the two games to find which is 
-    truly the game that reigns supreme.</p>
+    <div class="page-header">
+      <h1 id="main-title">EC Chetris</h1>
+      <p>This is Enzo's black belt game from Codeninjas Hacienda Heights</p>
+      <p>Chess and Tetris are among the most popular games of all time. Chess is a strategy game that has stood strong for hundreds of years. 
+        Tetris defined an era of computer games, and is still the best selling video game of all time. CHETRIS pairs the two games to find which is 
+        truly the game that reigns supreme.</p>
+    </div>
 
-  <div class="content-container">
+  <div class="main-content">
     <div class="webgl-balanced-container">
       <div class="instructions">
         <h2 class="subtitle">How To Play</h2>
