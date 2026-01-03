@@ -67,6 +67,7 @@
     
     .instructions {
       text-align: left;  /* keep text hugging left */
+      align-self: flex-start;
     }
     
     .webgl-content { 
@@ -155,6 +156,19 @@
       }
     }
 
+    /* ✅ Unity hard containment */
+    .unity-frame {
+      width: 640px;
+      min-height: 480px;
+      position: relative;
+      flex-shrink: 0;
+    }
+    
+    /* Prevent Unity from overlapping siblings */
+    .unity-frame * {
+      box-sizing: border-box;
+    }
+
     </style>
   </head>
   <body>
@@ -180,12 +194,14 @@
         </ol>
       </div>
   
-      <div class="webgl-content">
-        <div id="unityContainer"></div>
-        <div class="footer">
-          <div class="webgl-logo"></div>
-          <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-          <div class="title">EC Chetris by Enzo</div>
+      <div class="unity-frame">
+        <div class="webgl-content">
+          <div id="unityContainer"></div>
+          <div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">EC Chetris by Enzo</div>
+          </div>
         </div>
       </div>
   
