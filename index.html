@@ -39,9 +39,9 @@
       text-shadow: -2px -2px 0 #2bf4ff, 2px -2px 0 #2bf4ff, -2px 2px 0 #2bf4ff, 2px 2px 0 #2bf4ff,
              0px 2px 0 #2bf4ff, 2px 0px 0 #2bf4ff, 0px -2px 0 #2bf4ff, -2px 0px 0 #2bf4ff;
       margin-bottom: 0.3em; /* reduced bottom space */
-       font-family: "Jersey 10", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+      font-family: "Jersey 10", sans-serif;
+      font-weight: 400;
+      font-style: normal;
     }
     
     p {
@@ -83,13 +83,9 @@
     }
     
     .webgl-content {
-      flex: 0 0 auto;    /* don’t stretch */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      position: static !important;
     }
-    
+  
     .subtitle {
       color: rgb(248, 248, 248);
       text-shadow: -2px -2px 0 #FF5C5C, 2px -2px 0 #FF5C5C, -2px 2px 0 #FF5C5C, 2px 2px 0 #FF5C5C,
@@ -121,9 +117,7 @@
   
     /* Adjust Unity container size */
     #unityContainer {
-      width: 640px;
-      height: 480px;
-      background: #000; /* fallback */
+      position: static !important;
     }
     
     .footer {
